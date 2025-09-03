@@ -1,0 +1,6 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* base tweaks */
+html, body { min-height: 100%; background: #0a0a0a; }
