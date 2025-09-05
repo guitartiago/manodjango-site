@@ -1,6 +1,6 @@
 export const metadata = {
   title: "Mano Django",
-  description: "One page com transições e parallax",
+  description: "Banda Mano Django",
 };
 
 import "./globals.css";
