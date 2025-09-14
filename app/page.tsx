@@ -2,6 +2,7 @@
 
 import React, { useRef, useEffect, type ReactNode } from "react";
 import { motion, useScroll, useTransform, useSpring, useMotionValue } from "framer-motion";
+import Image from "next/image";
 
 const setlist = [
   "Salvation – Cranberries",
@@ -13,6 +14,7 @@ const setlist = [
   "Modern Love – David Bowie",
   "Valerie – Amy Winehouse",
   "Poison Heart – Ramones",
+  "I hate you better – Suicidal Tendencies",
   "3’s & 7’s – Queens Of The Stone Age",
   "Trippin’ On a Hole in a Paper Heart – Stone Temple Pilots",
   "Deeper Underground – Jamiroquai",
@@ -35,11 +37,11 @@ const setlist = [
 ];
 
 const members = [
-  { name: "Dalton", role: "Vocal" },
-  { name: "Luiz Sanchez", role: "Guitarra" },
-  { name: "Tiago Correia", role: "Guitarra" },
-  { name: "Grote", role: "Baixo" },
-  { name: "Rico", role: "Bateria (Superchiadeira)" },
+  { name: "Dalton", role: "Vocal", pic: "/images/dalton-quadrado.png"},
+  { name: "Luiz Sanchez", role: "Guitarra", pic: "/images/luizinho-quadrado.png" },
+  { name: "Tiago Correia", role: "Guitarra", pic: "/images/tiago-quadrado.png" },
+  { name: "Grote", role: "Baixo" , pic: "/images/grote-quadrado.png"},
+  { name: "Rico", role: "Bateria (Superchiadeira)", pic: "/images/rico-quadrado.png" },
 ];
 
 function ParallaxHero() {
@@ -161,7 +163,14 @@ function Integrantes() {
       <div className="grid gap-6 md:grid-cols-5">
         {members.map((m) => (
           <motion.div key={m.name} initial={{ opacity: 0, y: 12 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.4 }} className="rounded-2xl border border-zinc-800 bg-zinc-900/60 p-5 shadow-xl">
-            <div className="mb-3 h-28 w-full rounded-xl bg-gradient-to-br from-zinc-800 to-zinc-900" />
+            <div className="mb-3 w-full rounded-xl bg-gradient-to-br from-zinc-800 to-zinc-900" >
+              <Image
+                src={m.pic}
+                alt={m.name}
+                width={150}
+                height={150}
+                className="h-full w-full object-cover rounded-xl"/>
+            </div>
             <h3 className="text-lg font-bold text-white">{m.name}</h3>
             <p className="text-sm text-zinc-400">{m.role}</p>
           </motion.div>
