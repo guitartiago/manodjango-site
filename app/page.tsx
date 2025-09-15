@@ -202,7 +202,7 @@ function Contato() {
       <div className="mx-auto max-w-xl text-center">
         <p className="text-zinc-400">Para shows e press:</p>
         <div className="mt-4 flex flex-col items-center gap-3">
-          <a href="mailto:contato@manodjango.com.br" className="rounded-full border border-zinc-700 px-5 py-2 text-zinc-200 hover:border-zinc-500">contato@manodjango.com.br</a>
+          <a href="mailto:manodjangoband@gmail.com" className="rounded-full border border-zinc-700 px-5 py-2 text-zinc-200 hover:border-zinc-500">manodjangoband@gmail.com</a>
           <a href="https://instagram.com/mano_django" target="_blank" rel="noopener noreferrer" className="rounded-full bg-orange-600 px-5 py-2 font-semibold text-white hover:bg-orange-500">@mano_django</a>
         </div>
       </div>
