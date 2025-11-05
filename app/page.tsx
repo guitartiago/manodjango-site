@@ -34,6 +34,8 @@ const setlist = [
   "Blood Sugar Sex Magik – Red Hot Chili Peppers",
   "Strength to Endure – Ramones",
   "X-Ray Visions – Clutch",
+  "Fortunate Son - Creedence Clearwater Revival",
+  "You - Bad Religion"
 ];
 
 const members = [
