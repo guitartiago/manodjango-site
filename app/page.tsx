@@ -114,13 +114,11 @@ function ParallaxHero() {
         </motion.p>
 
         {/* LOGO DA BANDA */}
-        <div className="my-6 relative w-36 h-36 md:w-48 md:h-48">
-          <Image
-            src="/images/logo%20marca%20Mano%20Django.png"
+        <div className="my-6 flex justify-center">
+          <img
+            src="/images/logo.png"
             alt="Logo Mano Django"
-            width={200}
-            height={200}
-            className="object-contain mx-auto"
+            className="w-36 h-36 md:w-48 md:h-48 object-contain"
           />
         </div>
 
