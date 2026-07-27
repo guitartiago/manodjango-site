@@ -329,9 +329,12 @@ export default function Page() {
       <Manifesto />
       <Integrantes />
       <Setlist />
+      <Videos />
       <Contato />
       <DevSmokeTests />
-      <footer className="border-t border-zinc-800/60 px-6 py-10 text-center text-xs text-zinc-500">© {new Date().getFullYear()} Mano Django — manodjango.com.br</footer>
+      <footer className="border-t border-zinc-800/60 px-6 py-10 text-center text-xs text-zinc-500">
+        © {new Date().getFullYear()} Mano Django — manodjango.com.br
+      </footer>
     </motion.main>
   );
 }
