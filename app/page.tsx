@@ -5,46 +5,46 @@ import { motion, useScroll, useTransform, useSpring, useMotionValue } from "fram
 import Image from "next/image";
 
 const setlist = [
-I Shot The Sheriff - Eric Clapton
-Fortune Faded - Red Hot Chili Peppers
-Salvation - Cranberries
-Burnin' For You - Blue Öyster Cult
-Modern Love - David Bowie
-Good Times Bad Times - Led Zeppelin
-Fortunate Son - Creedence Clearwater Revival
-So Lonely - The Police
-Deeper Underground - Jamiroquai
-Love Song - 311
-Evidence - Faith No More
-B.O.O.T. - Pepper
-Poison Heart - Ramones
-I'll Hate You Better - Suicidal Tendencies
-3's & 7's - Queens Of The Stone Age
-Trippin’ on a Hole in a Paper Heart - Stone Temple Pilots
-Forest - System Of A Down
-Them Bones - Alice in Chains
-Outshined - Soundgarden
-The Lost Art of Keeping A Secret - Queens Of The Stone Age
-State Of Love And Trust - Pearl Jam
-Stray Cat Strut - Stray Cats
-Wrong Way - Sublime
-No Control - Pepper
-Me Lambe - Raimundos
-Ilê Aye - O Rappa
-Rogues - Incubus
-Again - Alice in Chains
-Midlife Crisis - Faith No More
-Sunday Morning - No Doubt
-Valerie - Amy Winehouse
-One Way or Another - Blondie
-Toys and Flavors - The Hellacopters
-Search And Destroy - Iggy Pop - The Stooges
-Roxanne - The Police
-Blood Sugar Sex Magik - Red Hot Chili Peppers
-Strength to Endure - Ramones
-You - Bad Religion
-Rebel Yell - Billy Idol
-X-Ray Visions - Clutch
+"I Shot The Sheriff - Eric Clapton",
+  "Fortune Faded - Red Hot Chili Peppers",
+  "Salvation - Cranberries",
+  "Burnin' For You - Blue Öyster Cult",
+  "Modern Love - David Bowie",
+  "Good Times Bad Times - Led Zeppelin",
+  "Fortunate Son - Creedence Clearwater Revival",
+  "So Lonely - The Police",
+  "Deeper Underground - Jamiroquai",
+  "Love Song - 311",
+  "Evidence - Faith No More",
+  "B.O.O.T. - Pepper",
+  "Poison Heart - Ramones",
+  "I'll Hate You Better - Suicidal Tendencies",
+  "3's & 7's - Queens Of The Stone Age",
+  "Trippin’ on a Hole in a Paper Heart - Stone Temple Pilots",
+  "Forest - System Of A Down",
+  "Them Bones - Alice in Chains",
+  "Outshined - Soundgarden",
+  "The Lost Art of Keeping A Secret - Queens Of The Stone Age",
+  "State Of Love And Trust - Pearl Jam",
+  "Stray Cat Strut - Stray Cats",
+  "Wrong Way - Sublime",
+  "No Control - Pepper",
+  "Me Lambe - Raimundos",
+  "Ilê Aye - O Rappa",
+  "Rogues - Incubus",
+  "Again - Alice in Chains",
+  "Midlife Crisis - Faith No More",
+  "Sunday Morning - No Doubt",
+  "Valerie - Amy Winehouse",
+  "One Way or Another - Blondie",
+  "Toys and Flavors - The Hellacopters",
+  "Search And Destroy - Iggy Pop - The Stooges",
+  "Roxanne - The Police",
+  "Blood Sugar Sex Magik - Red Hot Chili Peppers",
+  "Strength to Endure - Ramones",
+  "You - Bad Religion",
+  "Rebel Yell - Billy Idol",
+  "X-Ray Visions - Clutch"
 ];
 
 const members = [
