@@ -12,7 +12,7 @@ export const metadata: Metadata = {
     siteName: "Mano Django",
     images: [
       {
-        url: "/images/dalton-quadrado.png",
+        url: "https://manodjango.com.br/images/logo%20marca%20Mano%20Django.png",
         width: 800,
         height: 800,
         alt: "Mano Django",
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Mano Django | Rock Cru",
     description: "Rock cru. Sem maquiagem. Sem concessões.",
-    images: ["/images/dalton-quadrado.png"],
+    images: ["https://manodjango.com.br/images/logo%20marca%20Mano%20Django.png"],
   },
 };
 
