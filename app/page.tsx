@@ -85,6 +85,56 @@ function ParallaxHero() {
     mouseX.set(nx);
     mouseY.set(ny);
   };
+
+  const handleMouseLeave = () => {
+    mouseX.set(0);
+    mouseY.set(0);
+  };
+
+  const scaleTitle = useTransform(scrollYProgress, [0, 1], [1, 0.9]);
+  const opacityTitle = useTransform(scrollYProgress, [0, 1], [1, 0.4]);
+
+  return (
+    <section ref={ref} id="home" className="relative h-[100svh] overflow-hidden bg-black" onMouseMove={handleMouseMove} onMouseLeave={handleMouseLeave}>
+      {/* background layers */}
+      <motion.div style={{ y: ySlow, x: xSlow }} className="pointer-events-none absolute inset-0 bg-gradient-to-b from-[#0b0b0b] via-[#0f0f0f] to-black" />
+      <motion.div aria-hidden style={{ y: yMid, x: xMid, opacity: 0.15 }} className="absolute inset-0 mix-blend-overlay">
+        <div className="h-full w-full bg-[radial-gradient(rgba(255,255,255,0.07)_1px,transparent_1px)] bg-[size:3px_3px]" />
+      </motion.div>
+      <motion.div style={{ y: yFast, x: xFast, rotate: -1 }} className="absolute -left-16 -top-16 h-[60vh] w-[60vh] rounded-full bg-gradient-to-br from-orange-600/20 to-transparent blur-2xl" />
+      <motion.div style={{ y: yMid, x: xMid, rotate: 2 }} className="absolute -right-24 bottom-0 h-[50vh] w-[50vh] rounded-full bg-gradient-to-tr from-orange-500/10 to-transparent blur-2xl" />
+
+      {/* content */}
+      <div className="relative z-10 mx-auto flex h-full max-w-6xl flex-col items-center justify-center px-6 text-center">
+        <motion.h1 style={{ scale: scaleTitle, opacity: opacityTitle, x: xSlow, y: ySlowMouse }} className="text-5xl font-extrabold tracking-wider text-white drop-shadow md:text-7xl">
+          MANO DJANGO
+        </motion.h1>
+        <motion.p style={{ opacity: opacityTitle, x: xSlow, y: ySlowMouse }} className="mt-4 text-lg text-zinc-300 md:text-xl">
+          Rock cru. Sem maquiagem. Sem concessões.
+        </motion.p>
+
+        {/* LOGO DA BANDA */}
+        <div className="my-6 relative w-36 h-36 md:w-48 md:h-48">
+          <Image
+            src="/images/logo%20marca%20Mano%20Django.png"
+            alt="Logo Mano Django"
+            width={200}
+            height={200}
+            className="object-contain mx-auto"
+          />
+        </div>
+
+        <div className="mt-4 flex flex-wrap items-center justify-center gap-3">
+          <a href="#setlist" className="rounded-2xl bg-orange-600 px-6 py-3 text-sm font-bold uppercase tracking-wide text-white transition hover:bg-orange-500">Ver Repertório</a>
+          <a href="#contato" className="rounded-2xl border border-zinc-700 px-6 py-3 text-sm font-bold uppercase tracking-wide text-zinc-200 hover:border-zinc-500">Agendar Show</a>
+        </div>
+        <motion.div initial={{ y: 0, opacity: 0.7 }} animate={{ y: [0, 8, 0] }} transition={{ repeat: Infinity, duration: 2 }} className="absolute bottom-8 text-xs uppercase tracking-widest text-zinc-400">
+          role para ver mais
+        </motion.div>
+      </div>
+    </section>
+  );
+}
   const handleMouseLeave = () => {
     mouseX.set(0);
     mouseY.set(0);
