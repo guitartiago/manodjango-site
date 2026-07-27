@@ -207,6 +207,39 @@ function Setlist() {
   );
 }
 
+function Videos() {
+  // 💡 Substitua os IDs abaixo pelos IDs ou links dos 3 vídeos da banda no YouTube
+  // Exemplo: se o link for https://www.youtube.com/watch?v=ABC123XYZ, o ID é 'ABC123XYZ'
+  const videos = [
+    { title: "One Way Or Another", id: "_ryhXNusHPU" },
+    { title: "Fortune Faded", id: "dG_9FZD1z3s" },
+    { title: "Rebel Yell", id: "ONHmjzMM4YM" }
+  ];
+
+  return (
+    <RevealSection id="videos" title="Vídeos">
+      <div className="mx-auto max-w-6xl grid gap-6 md:grid-cols-3">
+        {videos.map((vid, i) => (
+          <div key={i} className="flex flex-col overflow-hidden rounded-2xl border border-zinc-800 bg-zinc-900/80 shadow-xl">
+            <div className="relative aspect-video w-full">
+              <iframe
+                className="h-full w-full"
+                src={`https://www.youtube.com/embed/${vid.id}`}
+                title={vid.title}
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              />
+            </div>
+            <div className="p-4 text-center text-sm font-semibold text-zinc-300">
+              {vid.title}
+            </div>
+          </div>
+        ))}
+      </div>
+    </RevealSection>
+  );
+}
+
 function Contato() {
   // ⚠️ DICA: Troque '5511964028585' pelo número de WhatsApp real da banda (55 + DDD + Número)
   const whatsappNumber = "5511964028585"; 
@@ -260,6 +293,7 @@ function StickyNav() {
         <li><a href="#manifesto" className="hover:text-white">Manifesto</a></li>
         <li><a href="#integrantes" className="hover:text-white">Integrantes</a></li>
         <li><a href="#setlist" className="hover:text-white">Repertório</a></li>
+        <li><a href="#videos" className="hover:text-white">Vídeos</a></li>
         <li><a href="#contato" className="hover:text-white">Contato</a></li>
       </ul>
     </motion.nav>
@@ -272,7 +306,7 @@ function DevSmokeTests() {
     try {
       console.assert(Array.isArray(setlist) && setlist.length > 0, "[TEST] Setlist vazio");
       console.assert(Array.isArray(members) && members.length === 5, "[TEST] Integrantes incompletos");
-      ["home", "manifesto", "integrantes", "setlist", "contato"].forEach((id) => {
+      ["home", "manifesto", "integrantes", "setlist", "videos", "contato"].forEach((id) => {
         const el = document.getElementById(id);
         console.assert(!!el, `[TEST] Seção não encontrada: ${id}`);
       });
